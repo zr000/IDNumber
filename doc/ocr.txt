@@ -1,0 +1,1 @@
+https://github.com/parrot-office/tesseract/releases/tag/3.5.1

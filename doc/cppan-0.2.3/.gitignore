@@ -1,0 +1,20 @@
+# build files and directories
+/build*
+/win*
+/bin*
+cppan
+.cppan*
+
+*.kdev*
+
+/packages
+
+/*.bat
+
+*~
+*.user
+
+*.lnk
+
+# bison generated
+*.output
