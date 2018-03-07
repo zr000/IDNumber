@@ -24,14 +24,16 @@ bool CFileFilter::_filter(string content)
 	return false;
 }
 
-void CFileFilter::GetOpenDirName(OpenDir func)
+string CFileFilter::GetOpenDirName(OpenDir func)
 {
 	if (NULL == func)
-		return;
+		return "";
 
 	pfOpenDir = func;
 
 	m_strDir = func();
+
+	return m_strDir;
 }
 
 int CFileFilter::FilterDirFile()

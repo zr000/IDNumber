@@ -29,7 +29,7 @@ protected:
 	size_t m_nFileIndex;
 public:
 	// 获取文件夹路径
-	void GetOpenDirName(OpenDir func);
+	string GetOpenDirName(OpenDir func);
 
 	// 按照规则过滤文件夹里的文件
 	virtual int FilterDirFile();

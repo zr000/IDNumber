@@ -10,6 +10,8 @@ public:
 	~CCardImg();
 
 private:
+	CDC* m_paintDC;
+
 	// 原始图像
 	Mat m_origImg;
 	// 文件路径
@@ -20,5 +22,7 @@ public:
 	// 读取身份证图像
 	bool ReadCardImg();
 	
+	// 设置窗口dc
+	void SetPaintDC(CDC* paintDC);
 };
 
