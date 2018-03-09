@@ -27,7 +27,9 @@ bool CCardImg::ReadCardImg()
 }
 
 
-// 设置窗口dc
+// 设置绘图dc
 void CCardImg::SetPaintDC(CDC* paintDC)
 {
+	if (NULL != paintDC)
+		m_paintDC = paintDC;
 }

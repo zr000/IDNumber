@@ -36,5 +36,7 @@ public:
 	
 	string GetNextFileName();
 	void ResumeIndex();
+
+	int GetFileCount() { return m_vecFiles.size(); }
 };
 

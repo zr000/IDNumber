@@ -22,7 +22,7 @@ public:
 	// 读取身份证图像
 	bool ReadCardImg();
 	
-	// 设置窗口dc
+	// 设置绘图dc
 	void SetPaintDC(CDC* paintDC);
 };
 
