@@ -810,7 +810,7 @@ void compute_line_occupation(                    //project blobs
       blob = blob_it.data ();
       blob_box = blob->bounding_box ();
       blob_box.rotate (rotation);//de-skew it
-      int32_t width = blob_box.right() - blob_box.left();
+      int width = blob_box.right() - blob_box.left();
       index = blob_box.bottom() - min_y;
       ASSERT_HOST(index >= 0 && index < line_count);
                                  //count transitions

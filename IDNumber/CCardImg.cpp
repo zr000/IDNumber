@@ -18,6 +18,7 @@ CCardImg::~CCardImg()
 // 读取身份证图像
 bool CCardImg::ReadCardImg()
 { 
+	//F:\Unity\Editor\Data\Documentation\en\uploads\Main
 	m_origImg = imread(m_strFullPath.c_str(), IMREAD_COLOR);
 	
 	if (m_origImg.empty())
@@ -25,11 +26,15 @@ bool CCardImg::ReadCardImg()
 
 	m_imgSize.cx = m_origImg.cols;
 	m_imgSize.cy = m_origImg.rows;
+	cv::Mat graymat;
+	cvtColor(m_origImg, m_binaryImg, COLOR_BGR2GRAY);
+	//
+	adaptiveThreshold(m_binaryImg, m_binaryImg, 255, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, 41, 0);
+	imshow("Gray Scale", m_binaryImg);
 
-
+	cv::waitKey();
 	return true;
 }
-
 
 #ifdef _WIN32
 
@@ -69,6 +74,8 @@ void CCardImg::MatToCImage(Mat &mat, CImage &cImage)
 
 }
 
+
+
 void CCardImg::DrawImg(cv::Mat& mat, CDC * dc, CRect rect)
 {
 	if (mat.empty() || mat.depth() != CV_8U)
@@ -87,3 +94,8 @@ void CCardImg::DrawImg(cv::Mat& mat, CDC * dc, CRect rect)
 #endif // _WIN32
 
 
+bool CCardImg::Position()
+{
+
+	return false;
+}

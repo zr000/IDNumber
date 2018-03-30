@@ -112,6 +112,9 @@
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">false</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">true</GenerateManifest>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">
+    <IncludePath>C:\Users\fly_b\.cppan\storage\src\2a\b4\6dbf\src;C:\Users\fly_b\.cppan\storage\obj\2a\b4\6dbf\build\e7e51674\cppan\2ab46dbf;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='LIB_Debug|Win32'">
     <CustomBuildStep>
       <Message>

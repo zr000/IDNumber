@@ -194,6 +194,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CCardImg.h" />
+    <ClInclude Include="CContractImg.h" />
     <ClInclude Include="CFileFilter.h" />
     <ClInclude Include="IDNumber.h" />
     <ClInclude Include="IDNumberDlg.h" />
@@ -203,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CCardImg.cpp" />
+    <ClCompile Include="CContractImg.cpp" />
     <ClCompile Include="CFileFilter.cpp" />
     <ClCompile Include="IDNumber.cpp" />
     <ClCompile Include="IDNumberDlg.cpp" />
